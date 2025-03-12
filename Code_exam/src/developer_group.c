@@ -10,4 +10,5 @@ void print_developer_group(){
     printf("⠀⠀⢸⣿⣿⡇⠀⠀⠀⠀⣼⣿⣿⣿\n");
     printf("⢰⣶⣿⣿⣿⣷⣶⣶⣾⣿⣿⠿⠛⠁\n");
     printf("⠀⠀⠀⠀⣿⡇⠀⢸⣿⡇⠀⠀⠀⠀\n");
+    printf("===========================\n");
 }

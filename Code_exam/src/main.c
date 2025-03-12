@@ -2,11 +2,13 @@
 #include "developer.h"
 #include "developer_group.h"
 
-int main() { //test change
+int main() {
     int a=1;
-    while(a<4){
-    printf("Choose your Action\nList Developers [1]\nPrint Group Logo [2]\nPrint Group[3]\nExit[4]\n");
-    scanf("%i",&a);
+    printf("===========================\n");
+    while(a!=4){
+    printf("Choose your Action\nList Developers        [1]\nPrint Group Logo       [2]\nPrint Group            [3]\nExit                   [4]\n===========================\n");
+    scanf("%i", &a);
+    printf("===========================\n");
     if (a==1){
         print_developer();
         
@@ -22,5 +24,6 @@ int main() { //test change
     }
    
 } 
+printf("Program exited\n===========================\n");
 return 0;
 }
