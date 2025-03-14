@@ -1,4 +1,0 @@
-/workspaces/Klaus/build/CMakeFiles/devgroup.dir
-/workspaces/Klaus/build/CMakeFiles/main.dir
-/workspaces/Klaus/build/CMakeFiles/edit_cache.dir
-/workspaces/Klaus/build/CMakeFiles/rebuild_cache.dir

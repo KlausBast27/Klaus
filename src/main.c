@@ -5,9 +5,9 @@
 
 int main(void) {
     int userChoice = 1;  // Klare Benennung der Variablen
-    printf("===========================\n");
 
     while (userChoice != 4) {
+        printf("===========================\n");
         printf("Choose your Action\n");
         printf("List Developers        [1]\n");
         printf("Print Group Logo       [2]\n");
@@ -24,11 +24,11 @@ int main(void) {
         printf("===========================\n");
 
         if (userChoice == 1) {
-            print_developer();
+            list_developers();
         } else if (userChoice == 2) {
             print_developer_group();
         } else if (userChoice == 3) {
-            print_developer();
+            list_developers();
             print_developer_group();
         } else if (userChoice == 4) {
             printf("Exiting program...\n");

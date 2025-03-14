@@ -1,2 +1,0 @@
-/usr/bin/ar qc libdevgroup.a CMakeFiles/devgroup.dir/src/developer.c.o CMakeFiles/devgroup.dir/src/developer_group.c.o
-/usr/bin/ranlib libdevgroup.a

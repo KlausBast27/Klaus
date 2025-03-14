@@ -1,6 +1,13 @@
-#ifndef DEVELOPER_LIB_H
-#define DEVELOPER_LIB_H
+#ifndef DEVELOPER_H
+#define DEVELOPER_H
 
-void print_developer();
+typedef struct {
+    char name[15];
+    char alias[15];
+} developer;
 
-#endif
+void init_developer(developer *dev, const char *name, const char *alias);
+void print_developer(const developer *dev);
+void list_developers();
+
+#endif // DEVELOPER_H
