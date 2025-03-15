@@ -1,24 +1,24 @@
-#include "developer.h"
-#include <stdio.h>
-#include <string.h>
+#include "developer.h"                          // Include the header file for the 'developer' structure
+#include <stdio.h>                              // Include standard I/O library for printing
+#include <string.h>                             // Include string library for string manipulation
 
 void init_developer(developer *dev, const char *name, const char *alias) {
-    strncpy(dev->name, name, sizeof(dev->name) - 1);
-    dev->name[sizeof(dev->name) - 1] = '\0';
-    strncpy(dev->alias, alias, sizeof(dev->alias) - 1);
-    dev->alias[sizeof(dev->alias) - 1] = '\0';
+    strncpy(dev->name, name, sizeof(dev->name) - 1);       // Copy name to the developer's name field safely
+    dev->name[sizeof(dev->name) - 1] = '\0';               // Ensure the name string is null-terminated
+    strncpy(dev->alias, alias, sizeof(dev->alias) - 1);    // Copy alias to the developer's alias field safely
+    dev->alias[sizeof(dev->alias) - 1] = '\0';             // Ensure the alias string is null-terminated
 }
 
 void print_developer(const developer *dev) {
-    printf("%s, Alias: %s\n", dev->name, dev->alias);
+    printf("%s, Alias: %s\n", dev->name, dev->alias);      // Print the developer's name and alias
 }
 
 void list_developers() {
-    developer dev1, dev2;
-    init_developer(&dev1, "Klaus Bast", "KlausBast27");
-    init_developer(&dev2, "Kai Retig", "Kailrt");
+    developer dev1, dev2;                                  // Declare two developer structures
+    init_developer(&dev1, "Klaus Bast", "KlausBast27");    // Initialize the first developer
+    init_developer(&dev2, "Kai Retig", "Kailrt");          // Initialize the second developer
 
-    print_developer(&dev1);
-    print_developer(&dev2);
-    printf("===========================\n");
+    print_developer(&dev1);                                // Print the details of the first developer
+    print_developer(&dev2);                                // Print the details of the second developer
+    printf("===========================\n");               // Print a separator for better readability
 }
