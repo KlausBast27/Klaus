@@ -3,6 +3,10 @@
 #include <string.h>                             // Include string library for string manipulation
 
 void init_developer(developer *dev, const char *name, const char *alias) {
+    if (dev == NULL || name == NULL || alias == NULL) {    // Check if pointers are NULL
+        printf("Pointer is NULL\n");                        // Print an error message
+        return;
+    }
     strncpy(dev->name, name, sizeof(dev->name) - 1);       // Copy name to the developer's name field safely
     dev->name[sizeof(dev->name) - 1] = '\0';               // Ensure the name string is null-terminated
     strncpy(dev->alias, alias, sizeof(dev->alias) - 1);    // Copy alias to the developer's alias field safely
@@ -10,6 +14,10 @@ void init_developer(developer *dev, const char *name, const char *alias) {
 }
 
 void print_developer(const developer *dev) {
+    if (dev == NULL) {                                     // Check if pointer is NULL
+        printf("Pointer dev is NULL\n");                   // Print an error message
+        return;
+    }
     printf("%s, Alias: %s\n", dev->name, dev->alias);      // Print the developer's name and alias
 }
 
@@ -20,5 +28,4 @@ void list_developers() {
 
     print_developer(&dev1);                                // Print the details of the first developer
     print_developer(&dev2);                                // Print the details of the second developer
-    printf("===========================\n");               // Print a separator for better readability
 }

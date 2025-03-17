@@ -14,8 +14,7 @@ void init_developer_group() {
         "   :::::      :::::  \n"
         "  ::::::     .:::::  \n"
         "::::::::::::::::::  \n"
-        "    :::     :::     \n"
-        "===========================\n", 
+        "    :::     :::     \n", 
         sizeof(group.group_logo) - 1);         // Limit the copy to avoid buffer overflow
     group.group_logo[sizeof(group.group_logo) - 1] = '\0'; // Ensure the string is null-terminated
 }

@@ -1,24 +1,24 @@
 cmake_minimum_required(VERSION 3.20)
 project(DeveloperGroup C)
 
-# Setze den Standard-C-Standard
+# Set the standard C standard
 set(CMAKE_C_STANDARD 11)
 set(CMAKE_C_STANDARD_REQUIRED True)
 
-# Füge Compiler-Optionen hinzu
+# Add compiler options
 add_compile_options(-Wall -Wextra -pedantic -O0)
 
-# Erstelle eine statische Bibliothek aus den Developer-Quellen
+# Create a static library from the Developer sources
 add_library(devgroup STATIC src/developer.c src/developer_group.c)
 
-# Füge das Verzeichnis mit Header-Dateien hinzu
+# Add the directory with header files
 target_include_directories(devgroup PUBLIC include)
 
-# Erstelle die ausführbare Datei "main"
+# Create the executable "main"
 add_executable(main src/main.c)
 
-# Füge das Verzeichnis mit Header-Dateien hinzu
+# Add the directory with header files
 target_include_directories(main PUBLIC include)
 
-# Verlinke die Bibliothek mit der ausführbaren Datei
+# Link the library with the executable
 target_link_libraries(main devgroup)
