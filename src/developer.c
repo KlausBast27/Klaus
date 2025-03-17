@@ -3,14 +3,12 @@
 #include <string.h>                             // Include string library for string manipulation
 
 void init_developer(developer *dev, const char *name, const char *alias) {
-    if (dev == NULL || name == NULL || alias == NULL) {    // Check if pointers are NULL
-        printf("Pointer is NULL\n");                        // Print an error message
+    if (dev == NULL || name == NULL || alias == NULL) {    // Check if pointers are NULL    
+        printf("Pointer is NULL\n");                        // Print an error message                        
         return;
     }
-    strncpy(dev->name, name, sizeof(dev->name) - 1);       // Copy name to the developer's name field safely
-    dev->name[sizeof(dev->name) - 1] = '\0';               // Ensure the name string is null-terminated
-    strncpy(dev->alias, alias, sizeof(dev->alias) - 1);    // Copy alias to the developer's alias field safely
-    dev->alias[sizeof(dev->alias) - 1] = '\0';             // Ensure the alias string is null-terminated
+    strcpy(dev->name, name);       // Copy name to the developer's name field
+    strcpy(dev->alias, alias);     // Copy alias to the developer's alias field
 }
 
 void print_developer(const developer *dev) {
@@ -24,8 +22,8 @@ void print_developer(const developer *dev) {
 void list_developers() {
     developer dev1, dev2;                                  // Declare two developer structures
     init_developer(&dev1, "Klaus Bast", "KlausBast27");    // Initialize the first developer
-    init_developer(&dev2, "Kai Retig", "Kailrt");          // Initialize the second developer
+    init_developer(&dev2, "Kai Retig ", "Kailrt");          // Initialize the second developer
 
-    print_developer(&dev1);                                // Print the details of the first developer
-    print_developer(&dev2);                                // Print the details of the second developer
+    print_developer(&dev1);                                // Print the details of the first developer                                
+    print_developer(&dev2);                                // Print the details of the second developer                                
 }
