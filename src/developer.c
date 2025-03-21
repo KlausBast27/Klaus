@@ -19,7 +19,7 @@ void print_developer(const developer *dev) {
     printf("%s, Alias: %s\n", dev->name, dev->alias);      // Print the developer's name and alias
 }
 
-void list_developers() {
+void list_developers(void) {
     developer dev1, dev2;                                  // Declare two developer structures
     init_developer(&dev1, "Klaus Bast", "KlausBast27");    // Initialize the first developer
     init_developer(&dev2, "Kai Retig ", "Kailrt");          // Initialize the second developer

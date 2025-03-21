@@ -11,7 +11,7 @@ typedef struct {                                // Define a structure to represe
     char group_logo[256];                       // Field to store the group's logo as a string
 } developer_group;
 
-void init_developer_group();                    // Function to initialize a developer group
-void print_developer_group();                   // Function to print the developer group's logo
+void init_developer_group(void);                    // Function to initialize a developer group
+void print_developer_group(void);                   // Function to print the developer group's logo
 
 #endif                                          // End of include guard

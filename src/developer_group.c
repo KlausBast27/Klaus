@@ -4,7 +4,7 @@
 
 static developer_group group;                  // Declare a static instance of the 'developer_group' structure
 
-void init_developer_group() {
+void init_developer_group(void) {
     strncpy(group.group_logo,                  // Copy the ASCII art logo into the group_logo field
         "    :::    :::     \n"
         " :::::::::::::::::   \n"
@@ -19,7 +19,7 @@ void init_developer_group() {
     group.group_logo[sizeof(group.group_logo) - 1] = '\0'; // Ensure the string is null-terminated
 }
 
-void print_developer_group() {
+void print_developer_group(void) {
     init_developer_group();                    // Initialize the developer group (set the logo)
     printf("%s", group.group_logo);            // Print the group logo
 }

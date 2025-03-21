@@ -8,6 +8,6 @@ typedef struct {                                 // Define a structure to repres
 
 void init_developer(developer *dev, const char *name, const char *alias); // Function to initialize a developer
 void print_developer(const developer *dev);                               // Function to print a developer's details
-void list_developers();                                                   // Function to list all developers
+void list_developers(void);                                                   // Function to list all developers
 
 #endif                                           // End of include guard

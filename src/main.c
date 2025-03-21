@@ -30,8 +30,8 @@ int main(void) {
         } else if (userChoice == 2) {
             print_developer_group();             // Call the function to print the group logo
         } else if (userChoice == 3) {
-            list_developers();                   // Call the function to list developers
             print_developer_group();             // Call the function to print the group logo
+            list_developers();                   // Call the function to list developers
         } else if (userChoice == 4) {
             printf("Exiting program...\n");      // If the user chooses to exit, print a message and terminate the program
             printf("===========================\n"); 
