@@ -1,27 +1,14 @@
-#define the minimum version of CMake required
-cmake_minimum_required(VERSION 3.20)
+cmake_minimum_required(VERSION 3.10)
+project(PacmanGame)
 
-# Set the project name
-project(DeveloperGroup C)
+set(CMAKE_CXX_STANDARD 11)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-# Set the standard C standard
-set(CMAKE_C_STANDARD 11)
-set(CMAKE_C_STANDARD_REQUIRED True)
+# Include-Verzeichnis hinzufügen
+include_directories(${PROJECT_SOURCE_DIR}/include)
 
-# Add compiler options
-add_compile_options(-Wall -Wextra -pedantic -O0)
+# Alle CPP-Dateien im src-Ordner sammeln
+file(GLOB SOURCES "${PROJECT_SOURCE_DIR}/src/*.cpp")
 
-# Create a static library from the Developer sources
-add_library(devgroup STATIC src/developer.c src/developer_group.c)
-
-# Add the directory with header files
-target_include_directories(devgroup PUBLIC include)
-
-# Create the executable "main"
-add_executable(main src/main.c)
-
-# Add the directory with header files
-target_include_directories(main PUBLIC include)
-
-# Link the library with the executable
-target_link_libraries(main devgroup)
+# Erzeuge das ausführbare Ziel
+add_executable(PacmanGame ${SOURCES})
