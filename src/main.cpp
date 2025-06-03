@@ -9,8 +9,8 @@ int main() {
     std::vector<std::shared_ptr<Developer>> developers;
 
     // Dynamically instantiate Developer objects
-    auto junior = std::make_shared<JuniorDeveloper>("Diana Prince", "Wonder Woman");
-    auto senior = std::make_shared<SeniorDeveloper>("Peter Parker", "Spiderman");
+    auto junior = std::make_shared<JuniorDeveloper>("Klaus Bast", "Wonder Woman");
+    auto senior = std::make_shared<SeniorDeveloper>("Kai Retig", "Spiderman");
 
     // Load logos (ensure the files exist in the path defined by LOGO_PATH)
     try {

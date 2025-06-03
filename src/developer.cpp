@@ -20,9 +20,9 @@ std::string Developer::getLogo() const {
     return logo;
 }
 
-// Prints the coffee message.
-void Developer::drink_coffee() {
-    std::cout << "Ahhhh, I needed that coffee!!!" << std::endl;
+// Prints the bitcoin message.
+void Developer::buy_bitcoin() {
+    std::cout << "Ahhhh, I needed that bitcoin!!!" << std::endl;
 }
 
 // Loads a logo from a text file and stores it in the logo member.

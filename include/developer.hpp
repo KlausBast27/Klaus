@@ -54,11 +54,11 @@ public:
     std::string getLogo() const;
 
     /**
-     * @brief Prints a coffee message.
+     * @brief Prints a bitcoin message.
      *
-     * This static method prints a coffee message to the standard output.
+     * This static method prints a bitcoin message to the standard output.
      */
-    static void drink_coffee();
+    static void buy_bitcoin();
 
     /**
      * @brief Pure virtual function to solve a problem.

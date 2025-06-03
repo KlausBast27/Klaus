@@ -10,5 +10,5 @@ void JuniorDeveloper::solve_problem() const {
     std::cout << "Solving a problem:" << std::endl;
     std::cout << *this;
     std::cout << "Ha, that was EZ!" << std::endl;
-    Developer::drink_coffee();
+    Developer::buy_bitcoin();
 }

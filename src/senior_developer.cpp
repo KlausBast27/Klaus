@@ -10,5 +10,5 @@ void SeniorDeveloper::solve_problem() const {
     std::cout << "Solving a problem:" << std::endl;
     std::cout << *this;
     std::cout << "Puh, that was tough" << std::endl;
-    Developer::drink_coffee();
+    Developer::buy_bitcoin();
 }
